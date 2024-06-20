@@ -9,6 +9,8 @@ $color3: #000;
 $color4: #fff;
 
 // special
+$overlay-color: rgba(0, 0, 0, 0.6);
+$overlay-color2: rgba(0, 0, 0, 0.3);
 
 // ========================
 // Typography
@@ -67,12 +69,14 @@ $classic-h3-font-size: $thirteenpx;
 $classic-body-font-size: $twelvepx;
 $classic-button-font-size: $tenpx;
 $big-button-font-size: $thirteenpx;
+$classic-banner-font-size: $twenty-fourpx;
+$classic-nav-font-size: $twelvepx;
 
 // Line Heights
-$classic-h1-line-height: 1.5;
-$classic-h2-line-height: 1.5;
-$classic-h3-line-height: 1.5;
-$classic-body-line-height: 1.6;
+// $classic-h1-line-height: 1.5;
+// $classic-h2-line-height: 1.5;
+// $classic-h3-line-height: 1.5;
+// $classic-body-line-height: 1.6;
 
 // Letter Spacing
 $classic-h1-letter-spacing: 0.5px;
@@ -90,8 +94,7 @@ $font1: "Montserrat", sans-serif;
 // ========================
 
 // Margin - Padding
-$classic-margin: calc($hundredpx + $fiftypx);
-$classic-section-margin: 0 $classic-margin $classic-margin $classic-margin;
+$classic-margin: $twentypx;
 $classic-button-padding: $tenpx $twenty-twopx;
 $big-button-padding: $twentypx $fourtypx;
 
@@ -100,6 +103,9 @@ $classic-gap: $thirty-twopx;
 
 // Variables tailles
 $logo-width: calc($hundredpx + $twentypx + $twenty-fivepx);
+
+$classic-border-radius: $elevenpx;
+$text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 
 // ========================================================================================================================
 //                                                MEDIA QUERIES ( RESPONSIVE )

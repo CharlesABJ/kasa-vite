@@ -1,12 +1,12 @@
 import React from "react";
 
-function Footer({ footerData }) {
+function Footer({ footerDatas }) {
   return (
     <footer className="Footer">
       <div className="logo">
-        <img src={footerData.logo} alt="Logo Kasa Blanc" />
+        <img src={footerDatas.logo} alt="Logo Kasa Blanc" />
       </div>
-      <p className="copyright">{footerData.copyright}</p>
+      <p className="copyright">{footerDatas.copyright}</p>
     </footer>
   );
 }

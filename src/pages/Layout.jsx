@@ -7,28 +7,28 @@ import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
 
 // Importation des assets
-import logo from "@assets/logo.svg";
-import footerLogo from "@assets/footer-logo.svg";
+import logo from "@assets/images/logo.svg";
+import footerLogo from "@assets/images/footer-logo.svg";
 
 function Layout(props) {
   // Données représentées sous forme d'objets pour chaque composant :
 
   // Header
-  const headerData = {
+  const headerDatas = {
     logo: logo,
   };
 
   // Footer
-  const footerData = {
+  const footerDatas = {
     logo: footerLogo,
     copyright: "© 2020 Kasa. All rights reserved",
   };
 
   return (
     <div className="Layout">
-      <Header headerData={headerData} />
+      <Header headerDatas={headerDatas} />
       <Outlet />
-      <Footer footerData={footerData} />
+      <Footer footerDatas={footerDatas} />
     </div>
   );
 }
