@@ -1,7 +1,7 @@
 import React from "react";
 
-function Home(props) {
+function Error404(props) {
   return <div></div>;
 }
 
-export default Home;
+export default Error404;

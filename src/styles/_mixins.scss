@@ -1,0 +1,41 @@
+// ========================
+// MIXINS POUR DISPLAY FLEX
+// ========================
+
+@mixin flex-center($justify: space-between) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+// ========================
+// MIXINS POUR POSITIONNEMENT
+// ========================
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ========================
+// MIXINS POUR DISPLAY GRID
+// ========================
+
+// Grid sur x colonnes
+@mixin grid($columns: 4) {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 768px) {
+    @if $columns > 1 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (min-width: 1250px) {
+    @if $columns > 2 {
+      grid-template-columns: repeat($columns, 1fr);
+    }
+  }
+}

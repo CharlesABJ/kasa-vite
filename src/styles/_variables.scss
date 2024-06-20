@@ -1,0 +1,106 @@
+// ========================
+// Colors
+// ========================
+
+//classic
+$color1: #ff6060;
+$color2: #e3e3e3;
+$color3: #000;
+$color4: #fff;
+
+// special
+
+// ========================
+// Typography
+// ========================
+
+// Convert px to rem
+$tenpx: 0.625rem;
+$elevenpx: 0.688rem;
+$twelvepx: 0.75rem;
+$thirteenpx: 0.813rem;
+$fourteenpx: 0.875rem;
+$fifteenpx: 0.938rem;
+$sixteenpx: 1rem;
+$seventeenpx: 1.063rem;
+$eighteenpx: 1.125rem;
+$nineteenpx: 1.188rem;
+$twentypx: 1.25rem;
+$twenty-onepx: 1.313rem;
+$twenty-twopx: 1.375rem;
+$twenty-threepx: 1.438rem;
+$twenty-fourpx: 1.5rem;
+$twenty-fivepx: 1.563rem;
+$twenty-sixpx: 1.625rem;
+$twenty-sevenpx: 1.688rem;
+$twenty-eightpx: 1.75rem;
+$twenty-ninepx: 1.813rem;
+$thirtypx: 1.875rem;
+$thirty-onepx: 1.938rem;
+$thirty-twopx: 2rem;
+$thirty-threepx: 2.063rem;
+$thirty-fourpx: 2.125rem;
+$thirty-fivepx: 2.188rem;
+$thirty-sixpx: 2.25rem;
+$thirty-sevenpx: 2.313rem;
+$thirty-eightpx: 2.375rem;
+$thirty-ninepx: 2.438rem;
+$fourtypx: 2.5rem;
+$fiftypx: 3.125rem;
+$sixtypx: 3.75rem;
+$seventypx: 4.375rem;
+$eightypx: 5rem;
+$ninetypx: 5.625rem;
+$hundredpx: 6.25rem;
+
+// Weight
+$weight-bold: bold;
+$weight-semibold: 600;
+$weight-medium: 500;
+$weight-regular: 400;
+$weight-light: 300;
+
+// Font Sizes
+$classic-h1-font-size: $eighteenpx;
+$classic-h2-font-size: $fourteenpx;
+$classic-h3-font-size: $thirteenpx;
+$classic-body-font-size: $twelvepx;
+$classic-button-font-size: $tenpx;
+$big-button-font-size: $thirteenpx;
+
+// Line Heights
+$classic-h1-line-height: 1.5;
+$classic-h2-line-height: 1.5;
+$classic-h3-line-height: 1.5;
+$classic-body-line-height: 1.6;
+
+// Letter Spacing
+$classic-h1-letter-spacing: 0.5px;
+$classic-h2-letter-spacing: 0.5px;
+$classic-h3-letter-spacing: 0.5px;
+$classic-body-letter-spacing: 0.5px;
+$classic-button-letter-spacing: 0.5px;
+$big-button-letter-spacing: 0.5px;
+
+// Font family
+$font1: "Montserrat", sans-serif;
+
+// ========================
+// ESPACEMENTS
+// ========================
+
+// Margin - Padding
+$classic-margin: calc($hundredpx + $fiftypx);
+$classic-section-margin: 0 $classic-margin $classic-margin $classic-margin;
+$classic-button-padding: $tenpx $twenty-twopx;
+$big-button-padding: $twentypx $fourtypx;
+
+// Gap
+$classic-gap: $thirty-twopx;
+
+// Variables tailles
+$logo-width: calc($hundredpx + $twentypx + $twenty-fivepx);
+
+// ========================================================================================================================
+//                                                MEDIA QUERIES ( RESPONSIVE )
+// ========================================================================================================================

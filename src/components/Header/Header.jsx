@@ -1,19 +1,18 @@
-import React, { lazy } from "react";
-import "./Header.scss";
-export default function Header() {
+import React from "react";
+import { NavLink } from "react-router-dom";
+export default function Header({ headerData }) {
   return (
-    <header>
-      <div className="logo"></div>
+    <header className="Header">
+      <div className="logo">
+        <img src={headerData.logo} alt="logo Kasa" />
+      </div>
       <nav>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <NavLink to="/home">Accueil</NavLink>
           </li>
           <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
+            <NavLink to="/about">À propos</NavLink>
           </li>
         </ul>
       </nav>
