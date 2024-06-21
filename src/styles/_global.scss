@@ -1,3 +1,9 @@
 main {
   padding-inline: $classic-margin;
 }
+
+@media screen and (min-width: 768px) {
+  .d-none-from-tablet {
+    display: none;
+  }
+}

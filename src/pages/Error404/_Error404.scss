@@ -1,0 +1,24 @@
+.Error404 {
+  @include flex-center(center, column);
+  text-align: center;
+  padding-inline: 3rem;
+  h1 {
+    font-size: calc($fiftypx + $twentypx + $twenty-sixpx);
+    color: $color1;
+  }
+  h2 {
+    font-size: $classic-h1-font-size;
+    font-weight: $weight-regular;
+    color: $color1;
+  }
+  a {
+    font-size: $classic-h2-font-size;
+    text-decoration: underline;
+  }
+
+  h1,
+  h2,
+  a {
+    margin-block: calc($fourtypx + $seventeenpx);
+  }
+}

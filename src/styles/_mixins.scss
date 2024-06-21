@@ -2,10 +2,11 @@
 // MIXINS POUR DISPLAY FLEX
 // ========================
 
-@mixin flex-center($justify: space-between) {
+@mixin flex-center($justify: space-between, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: center;
+  flex-direction: $direction;
 }
 
 // ========================

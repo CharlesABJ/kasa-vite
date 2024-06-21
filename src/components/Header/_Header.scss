@@ -1,7 +1,7 @@
 .Header {
   @include flex-center;
   justify-content: space-between;
-  padding: $classic-margin $classic-margin 27px;
+  padding: $classic-margin $classic-margin $thirtypx;
   .logo {
     img {
       width: $logo-width;
@@ -10,18 +10,12 @@
   nav {
     ul {
       display: flex;
-      gap: 40px;
-      list-style: none;
+      gap: $twenty-fivepx;
       li {
         a {
           text-transform: uppercase;
           font-size: $classic-nav-font-size;
-          font-weight: $weight-medium;
-          &:hover {
-          }
-          &.active {
-            text-decoration: underline;
-          }
+          font-weight: $weight-regular;
         }
       }
     }

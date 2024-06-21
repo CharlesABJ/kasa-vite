@@ -15,6 +15,16 @@ ul {
 a {
   text-decoration: none;
   color: $color3;
+  transition: color 0.3s ease-in-out;
+  &:not(.active) {
+    &:hover {
+      color: $color1;
+    }
+  }
+  &.active {
+    text-decoration: underline;
+    cursor: default;
+  }
 }
 
 img {
