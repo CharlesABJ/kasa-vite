@@ -1,6 +1,6 @@
 .Collapse {
   overflow: hidden;
-  position: relative;
+
   header {
     background-color: $color1;
     color: $color5;
@@ -24,10 +24,10 @@
     border-radius: $collapse-radius;
     padding: $twenty-fivepx $twentypx $twentypx;
     background-color: $color3;
-    transition: 0.3s ease-in-out;
-    transform: translateY(-100%);
+    transition: 0.075s ease-in-out;
+    transform: translateY(-50%);
     position: absolute;
-    opacity: 0;
+    visibility: hidden;
   }
   &.open {
     header {
@@ -39,7 +39,8 @@
       display: block;
       position: unset;
       transform: translateY(-10%);
-      opacity: 1;
+      visibility: visible;
+      transition: 0.3s ease-in-out;
     }
   }
 }
