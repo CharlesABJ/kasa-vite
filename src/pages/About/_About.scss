@@ -1,0 +1,6 @@
+.About {
+  .collapses-zone {
+    @include grid(1);
+    gap: $twentypx;
+  }
+}

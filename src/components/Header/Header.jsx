@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-export default function Header({ headerDatas }) {
+export default function Header({ headerData }) {
   return (
     <header className="Header">
       <div className="logo">
-        <img src={headerDatas.logo} alt="logo Kasa" />
+        <img src={headerData.logo} alt="logo Kasa" />
       </div>
       <nav>
         <ul>

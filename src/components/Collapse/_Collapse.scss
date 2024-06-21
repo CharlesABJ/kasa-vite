@@ -1,0 +1,45 @@
+.Collapse {
+  overflow: hidden;
+  position: relative;
+  header {
+    background-color: $color1;
+    color: $color5;
+    font-weight: $weight-semibold;
+    height: $thirtypx;
+    padding-inline: $tenpx;
+    border-radius: $collapse-radius;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    @include flex-center;
+    .arrow {
+      transition: 0.3s ease-in-out;
+      img {
+        width: $sixteenpx;
+        height: 9.4px;
+      }
+    }
+  }
+  .content {
+    border-radius: $collapse-radius;
+    padding: $twenty-fivepx $twentypx $twentypx;
+    background-color: $color3;
+    transition: 0.3s ease-in-out;
+    transform: translateY(-100%);
+    position: absolute;
+    opacity: 0;
+  }
+  &.open {
+    header {
+      .arrow {
+        transform: rotate(-180deg);
+      }
+    }
+    .content {
+      display: block;
+      position: unset;
+      transform: translateY(-10%);
+      opacity: 1;
+    }
+  }
+}

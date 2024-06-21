@@ -5,8 +5,9 @@
 //classic
 $color1: #ff6060;
 $color2: #e3e3e3;
-$color3: #000;
-$color4: #fff;
+$color3: #f6f6f6;
+$color4: #000;
+$color5: #fff;
 
 // special
 $overlay-color: rgba(0, 0, 0, 0.6);
@@ -106,6 +107,7 @@ $logo-width: calc($hundredpx + $twentypx + $twenty-fivepx);
 $logo-footer-width: calc($hundredpx + $twenty-twopx);
 
 $classic-border-radius: $elevenpx;
+$collapse-radius: calc($tenpx / 2);
 $text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 
 // ========================================================================================================================

@@ -5,13 +5,13 @@ import Banner from "@/components/Banner/Banner";
 import homeBanner from "@/assets/images/home-banner.jpg";
 
 function Home() {
-  const bannerDatas = {
+  const bannerData = {
     title: "Chez vous, partout et ailleurs",
     src: homeBanner,
   };
   return (
     <main className="Home">
-      <Banner bannerDatas={bannerDatas} />
+      <Banner bannerData={bannerData} />
     </main>
   );
 }

@@ -14,21 +14,21 @@ function Layout(props) {
   // Données représentées sous forme d'objets pour chaque composant :
 
   // Header
-  const headerDatas = {
+  const headerData = {
     logo: logo,
   };
 
   // Footer
-  const footerDatas = {
+  const footerData = {
     logo: footerLogo,
     copyright: "© 2020 Kasa. All rights reserved",
   };
 
   return (
     <div className="Layout">
-      <Header headerDatas={headerDatas} />
+      <Header headerData={headerData} />
       <Outlet />
-      <Footer footerDatas={footerDatas} />
+      <Footer footerData={footerData} />
     </div>
   );
 }
