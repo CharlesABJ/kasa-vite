@@ -1,0 +1,20 @@
+.Home {
+  .cards-zone {
+    @include grid(3);
+    gap: $twentypx;
+  }
+}
+
+// ========================================================================================================================
+//                                                MEDIA QUERIES ( RESPONSIVE )
+// ========================================================================================================================
+
+@media screen and (min-width: 768px) {
+  .Home {
+    .cards-zone {
+      padding: $fiftypx;
+      background-color: $color3;
+      border-radius: $twenty-fivepx;
+    }
+  }
+}

@@ -1,4 +1,3 @@
-// Importation des librairies
 import React from "react";
 import { Outlet } from "react-router-dom";
 
@@ -10,15 +9,13 @@ import Footer from "@components/Footer/Footer";
 import logo from "@assets/images/logo.svg";
 import footerLogo from "@assets/images/footer-logo.svg";
 
-function Layout(props) {
-  // Données représentées sous forme d'objets pour chaque composant :
-
-  // Header
+function Layout() {
+  // Données de Header
   const headerData = {
     logo: logo,
   };
 
-  // Footer
+  // Données de Footer
   const footerData = {
     logo: footerLogo,
     copyright: "© 2020 Kasa. All rights reserved",

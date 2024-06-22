@@ -8,18 +8,12 @@
 
   .overlay {
     border-radius: $classic-border-radius;
-    background-color: $overlay-color;
-    @include overlay;
-    &.banner-has-not-title {
-      background-color: $overlay-color2;
-    }
   }
   h1 {
     @include absolute-center($eighteenpx);
     font-size: $classic-banner-font-size;
     width: calc(2 * $hundredpx + $twenty-fivepx);
     color: $color5;
-
     text-shadow: $text-shadow;
   }
 }

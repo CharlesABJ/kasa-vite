@@ -4,7 +4,9 @@ export default function Header({ headerData }) {
   return (
     <header className="Header">
       <div className="logo">
-        <img src={headerData.logo} alt="logo Kasa" />
+        <NavLink to="/home">
+          <img src={headerData.logo} alt="logo Kasa" />
+        </NavLink>
       </div>
       <nav>
         <ul>

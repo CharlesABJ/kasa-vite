@@ -8,14 +8,17 @@
 @import "./_animations.scss";
 @import "./_global.scss";
 
-// (2) Importation des fichiers de style des composants
+// (2) Importation des fichiers de style des pages
+@import "../pages/Home/_Home.scss";
+@import "../pages/About/_About.scss";
+@import "../pages/Logement/_Logement.scss";
+@import "../pages/Error404/_Error404.scss";
+
+// (3) Importation des fichiers de style des composants généraux
 @import "../components/Header/_Header.scss";
 @import "../components/Footer/Footer.scss";
 @import "../components/Banner/_Banner.scss";
 @import "../components/Collapse/_Collapse.scss";
 
-// (3) Importation des fichiers de style des pages
-@import "../pages/Home/_Home.scss";
-@import "../pages/About/_About.scss";
-@import "../pages/Logement/_Logement.scss";
-@import "../pages/Error404/_Error404.scss";
+// (4) Importation des fichiers de style des composants spécifiques
+@import "../pages/Home/components/Card/_Card.scss";

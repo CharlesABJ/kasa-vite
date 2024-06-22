@@ -1,0 +1,19 @@
+.Card {
+  position: relative;
+  height: calc(2 * $hundredpx + $twenty-fivepx + $thirtypx);
+  .overlay {
+    border-radius: $classic-card-radius;
+  }
+  .cover {
+    border-radius: $classic-card-radius;
+  }
+  h2 {
+    @include absolute;
+    color: $color5;
+    width: calc(100% - 2 * $twentypx);
+  }
+  transition: 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+  }
+}

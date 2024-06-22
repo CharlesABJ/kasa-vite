@@ -10,8 +10,9 @@ $color4: #000;
 $color5: #fff;
 
 // special
-$overlay-color: rgba(0, 0, 0, 0.6);
-$overlay-color2: rgba(0, 0, 0, 0.3);
+$banner-overlay: rgba(0, 0, 0, 0.6);
+$banner-overlay2: rgba(0, 0, 0, 0.3);
+$card-overlay: rgba(0, 0, 0, 0.15);
 
 // ========================
 // Typography
@@ -107,6 +108,7 @@ $logo-width: calc($hundredpx + $twentypx + $twenty-fivepx);
 $logo-footer-width: calc($hundredpx + $twenty-twopx);
 
 $classic-border-radius: $elevenpx;
+$classic-card-radius: $tenpx;
 $collapse-radius: calc($tenpx / 2);
 $text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 
