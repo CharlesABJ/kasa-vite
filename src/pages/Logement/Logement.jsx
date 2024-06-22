@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 // Importation des composants
+import Cover from "@/pages/Logement/components/Cover/Cover";
 import Star from "@/pages/Logement/components/Star/Star";
 import Host from "@/pages/Logement/components/Host/Host";
 import Tag from "@/pages/Logement/components/Tag/Tag";
@@ -20,8 +21,8 @@ function Logement() {
 
   return (
     <div className="Logement">
-      <div className="cover">
-        <img src={logement.cover} alt={logement.title} />
+      <div className="cover-zone">
+        <Cover dataCover={logement} />
       </div>
       <h1>{logement.title}</h1>
       <h2 className="city">{logement.location}</h2>
