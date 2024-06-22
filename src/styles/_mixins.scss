@@ -23,14 +23,11 @@
 @mixin absolute-center($x: -50%) {
   position: absolute;
   top: 50%;
-
+  left: 50%;
+  transform: translate(-50%, -40%);
   @if $x != -50% {
     left: $x;
-    transform: translate(0, -50%);
-  }
-  else {
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -40%);
   }
 }
 

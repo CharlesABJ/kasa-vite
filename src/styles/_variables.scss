@@ -19,6 +19,7 @@ $card-overlay: rgba(0, 0, 0, 0.15);
 // ========================
 
 // Convert px to rem
+$fivepx: 0.313rem;
 $tenpx: 0.625rem;
 $elevenpx: 0.688rem;
 $twelvepx: 0.75rem;
@@ -73,6 +74,7 @@ $classic-button-font-size: $tenpx;
 $big-button-font-size: $thirteenpx;
 $classic-banner-font-size: $twenty-fourpx;
 $classic-nav-font-size: $twelvepx;
+$classic-tag-font-size: $tenpx;
 
 // Line Heights
 // $classic-h1-line-height: 1.5;
@@ -107,8 +109,9 @@ $classic-gap: $thirty-twopx;
 $logo-width: calc($hundredpx + $twentypx + $twenty-fivepx);
 $logo-footer-width: calc($hundredpx + $twenty-twopx);
 
-$classic-border-radius: $elevenpx;
-$classic-card-radius: $tenpx;
+$classic-radius: $tenpx;
+$classic-banner-radius: $elevenpx;
+$classic-tag-radius: $fivepx;
 $collapse-radius: calc($tenpx / 2);
 $text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 

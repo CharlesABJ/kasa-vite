@@ -1,0 +1,44 @@
+.Cover {
+  position: relative;
+  height: calc(2 * $hundredpx + $twenty-fivepx + $twentypx);
+  margin-bottom: $tenpx;
+  display: flex;
+  overflow: hidden;
+  .cover {
+    border-radius: $classic-radius;
+    transition: transform 0.3s;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    width: $twentypx;
+    &.left {
+      left: 0.4rem;
+      transform: rotate(-90deg) translateX(40%);
+    }
+    &.right {
+      right: 0.4rem;
+      transform: rotate(90deg) translateX(-40%);
+    }
+  }
+  .nb-of-pictures {
+    @include absolute-center;
+    top: 90%;
+    color: $color5;
+    text-shadow: $text-shadow;
+    font-weight: $weight-medium;
+    display: none;
+  }
+}
+
+// ========================================================================================================================
+//                                                MEDIA QUERIES ( RESPONSIVE )
+// ========================================================================================================================
+
+@media screen and (min-width: 768px) {
+  .Cover {
+    .nb-of-pictures {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.Host {
+  @include flex-center($justify: flex-start);
+  gap: $tenpx;
+  .host-name {
+    color: $color1;
+    max-width: $ninetypx;
+    text-align: end;
+  }
+  .host-picture {
+    width: $thirty-twopx;
+    height: $thirty-twopx;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+}

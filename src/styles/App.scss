@@ -20,5 +20,9 @@
 @import "../components/Banner/_Banner.scss";
 @import "../components/Collapse/_Collapse.scss";
 
-// (4) Importation des fichiers de style des composants spécifiques
+// (4) Importation des fichiers de style des composants spécifiques à une page
 @import "../pages/Home/components/Card/_Card.scss";
+@import "../pages/Logement/components/Cover/_Cover.scss";
+@import "../pages/Logement/components/Tag/_Tag.scss";
+@import "../pages/Logement/components/Host/_Host.scss";
+@import "../pages/Logement/components/Star/_Star.scss";

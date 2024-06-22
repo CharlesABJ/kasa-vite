@@ -1,0 +1,10 @@
+.Tag {
+  background-color: $color1;
+  color: $color5;
+  width: calc($sixtypx + $twenty-fourpx);
+  border-radius: $classic-tag-radius;
+  font-size: $classic-tag-font-size;
+  text-align: center;
+  font-weight: $weight-semibold;
+  padding-block: $fivepx 4px;
+}

@@ -2,10 +2,10 @@
   position: relative;
   height: calc(2 * $hundredpx + $twenty-fivepx + $thirtypx);
   .overlay {
-    border-radius: $classic-card-radius;
+    border-radius: $classic-radius;
   }
   .cover {
-    border-radius: $classic-card-radius;
+    border-radius: $classic-radius;
   }
   h2 {
     @include absolute;

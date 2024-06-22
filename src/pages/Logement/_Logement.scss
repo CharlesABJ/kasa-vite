@@ -1,0 +1,22 @@
+.Logement {
+  .city {
+    margin-block: $tenpx;
+  }
+  .tags-zone {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $tenpx;
+  }
+  .likes-and-host {
+    margin-block: $fifteenpx;
+    @include flex-center;
+    .likes-zone {
+      @include flex-center($justify: flex-start);
+      gap: $tenpx;
+    }
+  }
+  .collapses-zone {
+    @include grid(2);
+    gap: $twentypx;
+  }
+}

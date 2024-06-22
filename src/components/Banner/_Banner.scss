@@ -3,11 +3,11 @@
   height: calc($hundredpx + $elevenpx);
   margin-bottom: $twentypx;
   img {
-    border-radius: $classic-border-radius;
+    border-radius: $classic-banner-radius;
   }
 
   .overlay {
-    border-radius: $classic-border-radius;
+    border-radius: $classic-banner-radius;
   }
   h1 {
     @include absolute-center($eighteenpx);

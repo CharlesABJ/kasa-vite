@@ -1,0 +1,7 @@
+.Star {
+  color: $color2;
+  transition: 0.3s ease-in-out;
+  &.liked {
+    color: $color1;
+  }
+}

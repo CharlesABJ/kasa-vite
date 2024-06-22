@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
 // Importation des composants
@@ -19,20 +19,22 @@ function Logement() {
   // Nombre d'étoile maximum / Note maximum
   const rates = [1, 2, 3, 4, 5];
 
+  //
+  const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
+
   return (
-    <div className="Logement">
-      <div className="cover-zone">
-        <Cover dataCover={logement} />
-      </div>
+    <main className="Logement">
+      <Cover dataCover={{ ...logement, currentPictureIndex }} />
+
       <h1>{logement.title}</h1>
       <h2 className="city">{logement.location}</h2>
-      <div className="tags">
+      <div className="tags-zone">
         {logement.tags.map((tag, index) => (
           <Tag key={index} dataTag={tag} />
         ))}
       </div>
       <div className="likes-and-host">
-        <div className="likes">
+        <div className="likes-zone">
           {rates.map((rate, index) => (
             <Star
               key={index}
@@ -48,10 +50,15 @@ function Logement() {
           dataCollapse={{ title: "Description", content: logement.description }}
         />
         <Collapse
-          dataCollapse={{ title: "Equipements", content: logement.equipments }}
+          dataCollapse={{
+            title: "Equipements",
+            content: logement.equipments.map((equipement, index) => (
+              <p key={index}>{equipement}</p>
+            )),
+          }}
         />
       </div>
-    </div>
+    </main>
   );
 }
 

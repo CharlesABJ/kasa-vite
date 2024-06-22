@@ -7,6 +7,17 @@ main {
   padding-inline: $classic-margin;
 }
 
+h1 {
+  font-size: $classic-h1-font-size;
+  font-weight: $weight-regular;
+  color: $color1;
+}
+
+h2 {
+  font-size: $classic-h2-font-size;
+  font-weight: $weight-regular;
+}
+
 // Overlay
 .overlay {
   position: absolute;
