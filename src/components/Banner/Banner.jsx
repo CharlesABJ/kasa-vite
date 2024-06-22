@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Banner({ bannerData }) {
+export default function Banner({ dataBanner }) {
   return (
-    <div className={`Banner${bannerData.title ? "" : " banner-has-not-title"}`}>
+    <div className={`Banner${dataBanner.title ? "" : " banner-has-not-title"}`}>
       <div className="overlay"></div>
-      {bannerData.title && <h1>{bannerData.title}</h1>}
-      <img width="300px" src={bannerData.src} alt="bannière" />
+      {dataBanner.title && <h1>{dataBanner.title}</h1>}
+      <img width="300px" src={dataBanner.src} alt="bannière" />
     </div>
   );
 }

@@ -11,21 +11,21 @@ import footerLogo from "@assets/images/footer-logo.svg";
 
 function Layout() {
   // Données de Header
-  const headerData = {
+  const dataHeader = {
     logo: logo,
   };
 
   // Données de Footer
-  const footerData = {
+  const dataFooter = {
     logo: footerLogo,
     copyright: "© 2020 Kasa. All rights reserved",
   };
 
   return (
     <div className="Layout">
-      <Header headerData={headerData} />
+      <Header dataHeader={dataHeader} />
       <Outlet />
-      <Footer footerData={footerData} />
+      <Footer dataFooter={dataFooter} />
     </div>
   );
 }

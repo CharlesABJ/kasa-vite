@@ -20,7 +20,10 @@ function App() {
               <Route key={path} path={path} element={<Home />} />
             ))}
             <Route path="/about" element={<About />} />
-            <Route path="/logements/:id" element={<Logement />} />
+            <Route
+              path="/logements/:country?/:city?/:id"
+              element={<Logement />}
+            />
             <Route path="*" element={<Error404 />} />
           </Route>
         </Routes>

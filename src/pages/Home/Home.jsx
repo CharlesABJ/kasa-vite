@@ -6,20 +6,20 @@ import homeBanner from "@/assets/images/home-banner.jpg";
 
 // importation des données de logements pour Home
 import homesData from "@/datas/logements.json";
-import Card from "./components/Card/Card";
+import Card from "@pages/Home/components/Card/Card";
 
 function Home() {
   // Données de Banner
-  const bannerData = {
+  const dataBanner = {
     title: "Chez vous, partout et ailleurs",
     src: homeBanner,
   };
   return (
     <main className="Home">
-      <Banner bannerData={bannerData} />
+      <Banner dataBanner={dataBanner} />
       <div className="cards-zone">
         {homesData.map((homeData, index) => (
-          <Card key={index} cardData={homeData} />
+          <Card key={index} dataCard={homeData} />
         ))}
       </div>
     </main>

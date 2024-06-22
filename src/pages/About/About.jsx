@@ -3,10 +3,10 @@ import Banner from "@/components/Banner/Banner";
 import Collapse from "@/components/Collapse/Collapse";
 
 // importation des assets
-import aboutBanner from "@/assets/images/about-banner.jpg";
+import bannerAbout from "@/assets/images/about-banner.jpg";
 
 // creation des données de About
-const collapsesData = [
+const dataCollapses = [
   {
     title: "Fiabilité",
     content:
@@ -31,16 +31,16 @@ const collapsesData = [
 
 function About() {
   // Données de Banner
-  const bannerData = {
-    src: aboutBanner,
+  const dataBanner = {
+    src: bannerAbout,
   };
 
   return (
     <main className="About">
-      <Banner bannerData={bannerData} />
+      <Banner dataBanner={dataBanner} />
       <div className="collapses-zone">
-        {collapsesData.map((collapseData, index) => (
-          <Collapse key={index} collapseData={collapseData} />
+        {dataCollapses.map((dataCollapse, index) => (
+          <Collapse key={index} dataCollapse={dataCollapse} />
         ))}
       </div>
     </main>
