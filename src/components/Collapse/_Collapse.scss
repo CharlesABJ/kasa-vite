@@ -22,12 +22,13 @@
   }
   .content {
     border-radius: $collapse-radius;
-    padding: $twenty-fivepx $twentypx $twentypx;
+    padding: 0 $twentypx;
     background-color: $color3;
-    transition: 0.075s ease-in-out;
+    transition: 0.3s ease-in-out;
     transform: translateY(-50%);
-    position: absolute;
-    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    color: transparent;
   }
   &.open {
     header {
@@ -36,11 +37,10 @@
       }
     }
     .content {
-      display: block;
-      position: unset;
       transform: translateY(-10%);
-      visibility: visible;
-      transition: 0.3s ease-in-out;
+      padding: $twenty-fivepx $twentypx $twentypx;
+      height: max-content;
+      color: $color4;
     }
   }
 }
