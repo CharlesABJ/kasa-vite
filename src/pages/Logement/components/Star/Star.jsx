@@ -1,7 +1,7 @@
 import React from "react";
 
 function Star({ dataStar }) {
-  return <div className={`Star${dataStar}`}>A</div>;
+  return <i className={`Star fa-solid fa-star ${dataStar}`}></i>;
 }
 
 export default Star;

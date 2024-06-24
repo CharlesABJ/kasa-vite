@@ -12,7 +12,7 @@
     @include flex-center;
     .likes-zone {
       @include flex-center($justify: flex-start);
-      gap: $tenpx;
+      gap: $sevenpx;
     }
   }
   .collapses-zone {
