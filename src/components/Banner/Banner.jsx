@@ -5,7 +5,7 @@ export default function Banner({ dataBanner }) {
     <div className={`Banner${dataBanner.title ? "" : " banner-has-not-title"}`}>
       <div className="overlay"></div>
       {dataBanner.title && <h1>{dataBanner.title}</h1>}
-      <img width="300px" src={dataBanner.src} alt="bannière" />
+      <img loading="lazy" width="300px" src={dataBanner.src} alt="bannière" />
     </div>
   );
 }

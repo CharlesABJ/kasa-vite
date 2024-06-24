@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// importation des assets
+import imagePlaceHolder from "@/assets/images/logo.svg";
+
 function Card({ dataCard }) {
+  const handlePicturePlaceHolder = (e) => {
+    e.target.src = imagePlaceHolder;
+  };
   return (
     <Link
       to={`/logements${
@@ -16,7 +22,13 @@ function Card({ dataCard }) {
       className="Card"
     >
       <div className="overlay"></div>
-      <img className="cover" src={dataCard.cover} alt={dataCard.title} />
+      <img
+        loading="lazy"
+        className="cover"
+        src={dataCard.cover}
+        alt={dataCard.title}
+        onError={handlePicturePlaceHolder}
+      />
       <h2>{dataCard.title}</h2>
     </Link>
   );
