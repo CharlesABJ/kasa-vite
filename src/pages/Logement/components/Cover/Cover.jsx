@@ -5,11 +5,13 @@ function Cover({ dataCover }) {
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   const handlePrevPicture = () => {
     setCurrentPictureIndex(currentPictureIndex - 1);
+    if (currentPictureIndex === 0) {
+      setCurrentPictureIndex(dataCover.pictures.length - 1);
+    }
   };
   const handleNextPicture = () => {
     setCurrentPictureIndex(currentPictureIndex + 1);
   };
-
   let coverStyle = {
     transform: `translateX(-${currentPictureIndex * 100}%)`,
   };
@@ -28,7 +30,7 @@ function Cover({ dataCover }) {
 
       {dataCover.pictures.length > 1 && (
         <>
-          <span className="nb-of-pictures">{`${dataCover.currentPictureIndex}/${dataCover.pictures.length}`}</span>
+          <span className="nb-of-pictures">{`${currentPictureIndex}/${dataCover.pictures.length}`}</span>
           <div className="arrow left" onClick={handlePrevPicture}>
             <img src={arrow} alt="fleche gauche" />
           </div>
