@@ -21,7 +21,7 @@ function Card({ dataCard }) {
       }/${dataCard.id}`}
       className="Card"
     >
-      <div className="overlay"></div>
+      <div className="overlay half"></div>
       <img
         loading="lazy"
         className="cover"

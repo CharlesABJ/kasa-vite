@@ -71,6 +71,7 @@ $weight-light: 300;
 
 // Font Sizes
 $classic-h1-font-size: $eighteenpx;
+
 $classic-h2-font-size: $fourteenpx;
 $classic-h3-font-size: $thirteenpx;
 $classic-body-font-size: $twelvepx;
@@ -113,12 +114,36 @@ $classic-gap: $thirty-twopx;
 $logo-width: calc($hundredpx + $twentypx + $twenty-fivepx);
 $logo-footer-width: calc($hundredpx + $twenty-twopx);
 
+// Height
+$classic-card-height: calc(2 * $hundredpx + $twenty-fivepx + $thirtypx);
+
 $classic-radius: $tenpx;
 $classic-banner-radius: $elevenpx;
 $classic-tag-radius: $fivepx;
 $collapse-radius: calc($tenpx / 2);
 $text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 
+// Mixins
+
+// For h1
+@mixin classic-h1() {
+  font-size: $eighteenpx;
+  font-weight: $weight-semibold;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+
+  @media screen and (min-width: 768px) {
+    font-size: $twenty-sixpx;
+  }
+}
 // ========================================================================================================================
 //                                                MEDIA QUERIES ( RESPONSIVE )
 // ========================================================================================================================
+
+@mixin classic-gallery-card() {
+  height: calc(2 * $hundredpx + $twenty-fivepx + $thirtypx);
+
+  @media screen and (min-width: 768px) {
+    height: calc(3 * $hundredpx + $fourtypx);
+  }
+}

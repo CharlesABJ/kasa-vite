@@ -9,6 +9,7 @@
     transition: transform 0.3s;
   }
   .arrow {
+    cursor: pointer;
     position: absolute;
     top: 50%;
     width: $twentypx;

@@ -4,6 +4,7 @@
   width: calc($sixtypx + $twenty-fourpx);
   border-radius: $classic-tag-radius;
   font-size: $classic-tag-font-size;
+  @include flex-center($justify: center);
   text-align: center;
   font-weight: $weight-semibold;
   padding-block: $fivepx 4px;

@@ -11,7 +11,6 @@ export default defineConfig({
       "@pages": "/src/pages", // Alias pour le répertoire des pages
       "@components": "/src/components", // Alias pour le répertoire des composants
       "@assets": "/src/assets", // Alias pour le répertoire des assets
-      "@datas": "/src/datas", // Alias pour le répertoire des données (data)
       "@styles": "/src/styles", // Alias pour le répertoire des styles
     },
   },

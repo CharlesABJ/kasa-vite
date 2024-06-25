@@ -31,10 +31,18 @@ function Cover({ dataCover }) {
       {dataCover.pictures.length > 1 && (
         <>
           <span className="nb-of-pictures">{`${currentPictureIndex}/${dataCover.pictures.length}`}</span>
-          <div className="arrow left" onClick={handlePrevPicture}>
+          <div
+            title="Afficher l'image précédente"
+            className="arrow left"
+            onClick={handlePrevPicture}
+          >
             <img src={arrow} alt="fleche gauche" />
           </div>
-          <div className="arrow right" onClick={handleNextPicture}>
+          <div
+            title="Afficher l'image suivante"
+            className="arrow right"
+            onClick={handleNextPicture}
+          >
             <img src={arrow} alt="fleche droite" />
           </div>
         </>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 // Importation des composants
@@ -9,19 +9,40 @@ import Tag from "@/pages/Logement/components/Tag/Tag";
 import Collapse from "@/components/Collapse/Collapse";
 
 // importation des données de logements
-import logements from "@datas/logements.json";
+let apiUrl = "../api/logements.json";
 
 function Logement() {
   // Récupération de l'id de logement
   const { id } = useParams();
-  const logement = logements.find((logement) => logement.id === id);
+  const [logement, setLogement] = useState(null);
+
+  // Tableau vide = utilisation de la fonction uniquement au montage
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        const logementEnCours = data.find((logement) => logement.id === id);
+
+        setLogement(logementEnCours);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    }
+    fetchData();
+  }, []);
 
   // Nombre d'étoile maximum / Note maximum
   const rates = [1, 2, 3, 4, 5];
 
   //
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
-
+  if (!logement)
+    return (
+      <div>
+        <h1>Chargement...</h1>
+      </div>
+    );
   return (
     <main className="Logement">
       <Cover dataCover={{ ...logement, currentPictureIndex }} />

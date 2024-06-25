@@ -1,16 +1,14 @@
 .Card {
   position: relative;
-  height: calc(2 * $hundredpx + $twenty-fivepx + $thirtypx);
-  .overlay {
-    border-radius: $classic-radius;
-  }
-  .cover {
-    border-radius: $classic-radius;
-  }
+  @include classic-gallery-card;
+  border-radius: $classic-radius;
+  overflow: hidden;
+
   h2 {
     @include absolute;
     color: $color5;
     width: calc(100% - 2 * $twentypx);
+    width: calc($hundredpx + $sixtypx);
   }
   transition: 0.3s ease-in-out;
   &:hover {
