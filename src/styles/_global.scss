@@ -6,7 +6,7 @@ body {
 }
 
 main {
-  padding-inline: $classic-margin;
+  @include classic-padding;
 }
 
 h1 {
@@ -45,8 +45,18 @@ h2 {
   }
 }
 
+// ========================================================================================================================
+//                                                MEDIA QUERIES ( RESPONSIVE )
+// ========================================================================================================================
+
 @media screen and (min-width: 768px) {
   .d-none-from-tablet {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  main {
+    padding-block: 0 $fiftypx;
   }
 }

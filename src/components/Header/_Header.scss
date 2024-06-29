@@ -1,7 +1,8 @@
 .Header {
   @include flex-center;
   justify-content: space-between;
-  padding: $classic-margin $classic-margin $thirtypx;
+  @include classic-padding;
+  padding-bottom: $thirtypx;
   .logo {
     img {
       width: $logo-width;
@@ -13,9 +14,28 @@
       gap: $twenty-fivepx;
       li {
         a {
-          text-transform: uppercase;
-          font-size: $classic-nav-font-size;
-          font-weight: $weight-medium;
+          @include classic-nav-menu;
+        }
+      }
+    }
+  }
+}
+
+// ========================================================================================================================
+//                                                MEDIA QUERIES ( RESPONSIVE )
+// ========================================================================================================================
+
+@media screen and (min-width: 1250px) {
+  .Header {
+    padding-bottom: $fiftypx;
+
+    nav {
+      ul {
+        gap: $thirtypx;
+        li {
+          a {
+            font-size: $fourteenpx;
+          }
         }
       }
     }

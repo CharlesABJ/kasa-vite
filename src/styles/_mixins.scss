@@ -1,3 +1,26 @@
+@mixin classic-margin {
+  margin: $twentypx;
+  @media screen and (min-width: 1250px) {
+    margin: $hundredpx;
+  }
+}
+
+@mixin classic-padding {
+  padding: $twentypx;
+  @media screen and (min-width: 1250px) {
+    padding: $hundredpx;
+  }
+}
+
+@mixin classic-nav-menu {
+  text-transform: uppercase;
+  font-size: $classic-nav-font-size;
+  font-weight: $weight-medium;
+  @media screen and (min-width: 1250px) {
+    font-size: $thirty-fourpx;
+  }
+}
+
 // ========================
 // MIXINS POUR DISPLAY FLEX
 // ========================

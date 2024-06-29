@@ -11,9 +11,27 @@
   }
   h1 {
     @include absolute-center($eighteenpx);
-    font-size: $classic-banner-font-size;
+
+    font-size: $twenty-fourpx;
+
     width: calc(2 * $hundredpx + $twenty-fivepx);
     color: $color5;
     text-shadow: $text-shadow;
+  }
+}
+
+// ========================================================================================================================
+//                                                MEDIA QUERIES ( RESPONSIVE )
+// ========================================================================================================================
+
+@media screen and (min-width: 1250px) {
+  .Banner {
+    height: calc(2 * $hundredpx + $twenty-threepx);
+
+    h1 {
+      @include absolute-center();
+      font-size: calc($twenty-fourpx * 2);
+      width: max-content;
+    }
   }
 }
