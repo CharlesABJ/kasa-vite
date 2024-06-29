@@ -12,6 +12,7 @@ export default defineConfig({
       "@components": "/src/components", // Alias pour le répertoire des composants
       "@assets": "/src/assets", // Alias pour le répertoire des assets
       "@styles": "/src/styles", // Alias pour le répertoire des styles
+      "@hooks": "/src/hooks", // Alias pour le répertoire des hooks
     },
   },
 });
