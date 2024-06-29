@@ -9,7 +9,7 @@ import Tag from "@/pages/Logement/components/Tag/Tag";
 import Collapse from "@/components/Collapse/Collapse";
 
 // importation des données de logements
-let apiUrl = "../api/logements.json";
+let apiLogementsUrl = "../api/logements.json";
 
 function Logement() {
   // Récupération de l'id de logement
@@ -20,7 +20,7 @@ function Logement() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(apiLogementsUrl);
         const data = await response.json();
         const logementEnCours = data.find((logement) => logement.id === id);
 

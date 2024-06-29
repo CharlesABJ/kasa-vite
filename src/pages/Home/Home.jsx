@@ -8,7 +8,9 @@ import homeBanner from "@/assets/images/home-banner.jpg";
 import Card from "./components/Card/Card";
 
 // importation des données de logements pour Home
-let apiUrl = "./api/logements.json";
+let apiLogementsUrl = "./api/logements.json";
+
+// FAIRE LA RECUPERATION DES DONNEES AVEC UN HOOK PERSONALISE (useFetch)
 
 function Home() {
   const [homesData, setHomesData] = useState([]);
@@ -17,7 +19,7 @@ function Home() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(apiLogementsUrl);
         const data = await response.json();
         setHomesData(data);
       } catch (error) {
