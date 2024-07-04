@@ -2,7 +2,7 @@
   @include flex-center;
   justify-content: space-between;
   @include classic-padding;
-  padding-bottom: $thirtypx;
+  padding-bottom: calc($twenty-sevenpx - $twentypx);
   .logo {
     img {
       width: $logo-width;
@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 1250px) {
   .Header {
-    padding-bottom: $fiftypx;
+    padding-block: calc($twentypx + $twenty-fivepx) $fiftypx;
 
     nav {
       ul {
