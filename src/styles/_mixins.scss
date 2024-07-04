@@ -1,128 +1,3 @@
-@mixin classic-margin {
-  margin: $twentypx;
-  @media screen and (min-width: 1250px) {
-    margin: $hundredpx;
-  }
-}
-
-@mixin classic-padding {
-  padding: $twentypx;
-  @media screen and (min-width: 1250px) {
-    padding: $hundredpx;
-  }
-}
-
-@mixin classic-nav-menu {
-  text-transform: uppercase;
-  font-size: $classic-nav-font-size;
-  font-weight: $weight-medium;
-  @media screen and (min-width: 1250px) {
-    font-size: $thirty-fourpx;
-  }
-}
-
-@mixin classic-card-title-font-size {
-  font-size: $fourteenpx;
-  @media screen and (min-width: 1250px) {
-    font-size: $eighteenpx;
-  }
-}
-
-@mixin classic-card-title {
-  @include classic-card-title-font-size;
-}
-
-@mixin classic-body-font-size {
-  font-size: $twelvepx;
-  @media screen and (min-width: 1250px) {
-    font-size: $eighteenpx;
-  }
-}
-
-@mixin classic-body {
-  @include classic-body-font-size;
-  font-weight: $weight-regular;
-  line-height: 1.5;
-}
-
-// For h1
-
-@mixin classic-h1-font-size() {
-  font-size: $eighteenpx;
-
-  @media screen and (min-width: 1250px) {
-    font-size: $thirty-sixpx;
-  }
-}
-@mixin classic-h1() {
-  @include classic-h1-font-size;
-  font-weight: $weight-semibold;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  color: $color1;
-
-  @media screen and (min-width: 1250px) {
-    font-size: $thirty-sixpx;
-  }
-}
-
-// For h2
-@mixin classic-h2-font-size() {
-  font-size: $fourteenpx;
-
-  @media screen and (min-width: 1250px) {
-    font-size: $eighteenpx;
-  }
-}
-
-@mixin classic-h2() {
-  @include classic-h2-font-size;
-  font-weight: $weight-semibold;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-}
-
-@mixin classic-banner-title() {
-  font-size: $twenty-fourpx;
-  @media screen and (min-width: 1250px) {
-    font-size: $thirty-sixpx;
-  }
-}
-
-@mixin classic-tag-font-size() {
-  font-size: $tenpx;
-
-  @media screen and (min-width: 1250px) {
-    font-size: $fourteenpx;
-  }
-}
-
-@mixin classic-tag-radius() {
-  border-radius: $fivepx;
-
-  @media screen and (min-width: 1250px) {
-    border-radius: $tenpx;
-  }
-}
-
-@mixin classic-tag() {
-  @include classic-tag-font-size;
-  @include flex-center(center);
-  @include classic-tag-radius;
-  background-color: $color1;
-  color: $color5;
-  width: calc($sixtypx + $twenty-fourpx);
-
-  text-align: center;
-  font-weight: $weight-semibold;
-  padding-block: $fivepx $fourpx;
-
-  @media screen and (min-width: 1250px) {
-    width: max-content;
-    padding-inline: $sixteenpx;
-  }
-}
-
 // ========================
 // MIXINS POUR DISPLAY FLEX
 // ========================
@@ -175,4 +50,152 @@
       grid-template-columns: repeat($columns, 1fr);
     }
   }
+}
+
+// ========================
+// MIXINS POUR MARGES ET PADDING
+// ========================
+
+@mixin classic-margin {
+  margin: $twentypx;
+  @media screen and (min-width: 1250px) {
+    margin: $hundredpx;
+  }
+}
+
+@mixin classic-padding {
+  padding: $twentypx;
+  @media screen and (min-width: 1250px) {
+    padding: $hundredpx;
+  }
+}
+
+// ========================
+// MIXINS POUR TYPOGRAPHIE
+// ========================
+
+@mixin classic-nav-menu {
+  text-transform: uppercase;
+  font-size: $classic-nav-font-size;
+  font-weight: $weight-medium;
+  @media screen and (min-width: 1250px) {
+    font-size: $thirty-fourpx;
+  }
+}
+
+@mixin classic-card-title-font-size {
+  font-size: $fourteenpx;
+  @media screen and (min-width: 1250px) {
+    font-size: $eighteenpx;
+  }
+}
+
+@mixin classic-card-title {
+  @include classic-card-title-font-size;
+}
+
+@mixin classic-body-font-size {
+  font-size: $twelvepx;
+  @media screen and (min-width: 1250px) {
+    font-size: $eighteenpx;
+  }
+}
+
+@mixin classic-body {
+  @include classic-body-font-size;
+  font-weight: $weight-regular;
+  line-height: 1.5;
+}
+
+// ========================
+// MIXINS POUR TITRES
+// ========================
+
+// For h1
+@mixin classic-h1-font-size() {
+  font-size: $eighteenpx;
+
+  @media screen and (min-width: 1250px) {
+    font-size: $thirty-sixpx;
+  }
+}
+@mixin classic-h1() {
+  @include classic-h1-font-size;
+  font-weight: $weight-semibold;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: $color1;
+
+  @media screen and (min-width: 1250px) {
+    font-size: $thirty-sixpx;
+  }
+}
+
+// For h2
+@mixin classic-h2-font-size() {
+  font-size: $fourteenpx;
+
+  @media screen and (min-width: 1250px) {
+    font-size: $eighteenpx;
+  }
+}
+
+@mixin classic-h2() {
+  @include classic-h2-font-size;
+  font-weight: $weight-semibold;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+@mixin classic-banner-title() {
+  font-size: $twenty-fourpx;
+  @media screen and (min-width: 1250px) {
+    font-size: $thirty-sixpx;
+  }
+}
+
+// ========================
+// MIXINS POUR TAGS
+// ========================
+
+@mixin classic-tag-font-size() {
+  font-size: $tenpx;
+
+  @media screen and (min-width: 1250px) {
+    font-size: $fourteenpx;
+  }
+}
+
+@mixin classic-tag-radius() {
+  border-radius: $fivepx;
+
+  @media screen and (min-width: 1250px) {
+    border-radius: $tenpx;
+  }
+}
+
+@mixin classic-tag() {
+  @include classic-tag-font-size;
+  @include flex-center(center);
+  @include classic-tag-radius;
+  background-color: $color1;
+  color: $color5;
+  width: calc($sixtypx + $twenty-fourpx);
+
+  text-align: center;
+  font-weight: $weight-semibold;
+  padding-block: $fivepx $fourpx;
+
+  @media screen and (min-width: 1250px) {
+    width: max-content;
+    padding-inline: $sixteenpx;
+  }
+}
+
+// ========================
+// MIXINS POUR OMBRES
+// ========================
+
+@mixin classic-text-shadow {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }

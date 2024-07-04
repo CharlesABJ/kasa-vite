@@ -11,11 +11,10 @@
   }
   h1 {
     @include absolute-center($eighteenpx);
-
     @include classic-banner-title;
+    @include classic-text-shadow;
 
     color: $color5;
-    text-shadow: $text-shadow;
   }
 }
 

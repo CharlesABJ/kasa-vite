@@ -35,9 +35,9 @@
     @include absolute-center;
     top: 90%;
     color: $color5;
-    text-shadow: $text-shadow;
+    @include classic-text-shadow;
     font-weight: $weight-medium;
-    // display: none;
+    display: none;
   }
 }
 
