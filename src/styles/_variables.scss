@@ -19,6 +19,10 @@ $card-overlay: rgba(0, 0, 0, 0.15);
 // ========================
 
 // Convert px to rem
+$onepx: 0.063rem;
+$twopx: 0.125rem;
+$threepx: 0.188rem;
+$fourpx: 0.25rem;
 $fivepx: 0.313rem;
 $sixpx: 0.375rem;
 $sevenpx: 0.438rem;
@@ -122,19 +126,6 @@ $classic-tag-radius: $fivepx;
 $collapse-radius: calc($tenpx / 2);
 $text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 
-// Mixins
-
-// For h1
-@mixin classic-h1() {
-  font-size: $eighteenpx;
-  font-weight: $weight-semibold;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-
-  @media screen and (min-width: 768px) {
-    font-size: $twenty-sixpx;
-  }
-}
 // ========================================================================================================================
 //                                                MEDIA QUERIES ( RESPONSIVE )
 // ========================================================================================================================

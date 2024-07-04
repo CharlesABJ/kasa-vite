@@ -10,16 +10,15 @@ import Card from "./components/Card/Card";
 // importation des données de logements pour Home
 let apiLogementsUrl = "./api/logements.json";
 
-// FAIRE LA RECUPERATION DES DONNEES AVEC UN HOOK PERSONALISE (useFetch)
-
 function Home() {
-  const { data: homesData, loading } = useFetch(apiLogementsUrl);
+  const { data: homesData, loading, error } = useFetch(apiLogementsUrl);
   // Données de Banner
   const dataBanner = {
     title: "Chez vous, partout et ailleurs",
     src: homeBanner,
   };
   if (loading) return <div>Chargement...</div>;
+  if (error) return <div>Erreur lors de la récupération des données</div>;
   return (
     <main className="Home">
       <Banner dataBanner={dataBanner} />

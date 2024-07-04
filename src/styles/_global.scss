@@ -1,6 +1,6 @@
 body {
   font-family: $font1;
-  font-size: $classic-body-font-size;
+  @include classic-body-font-size;
   min-width: 320px;
   max-width: 1920px;
 }
@@ -10,14 +10,11 @@ main {
 }
 
 h1 {
-  font-size: $classic-h1-font-size;
-  font-weight: $weight-semibold;
-  color: $color1;
+  @include classic-h1;
 }
 
 h2 {
-  font-size: $classic-h2-font-size;
-  font-weight: $weight-semibold;
+  @include classic-h2;
 }
 
 // Overlay

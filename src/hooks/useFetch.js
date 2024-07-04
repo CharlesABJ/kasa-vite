@@ -1,24 +1,29 @@
 import React, { useEffect, useState } from "react";
 
-function useFetch(apiUrl) {
+function useFetch(apiUrl, id) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [error, setError] = useState(null);
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        setData(data);
-      } catch (error) {
-        console.error(error);
+        if (!id) {
+          setData(data);
+        } else {
+          const uniqueData = data.find((item) => item.id === id);
+          setData(uniqueData);
+        }
+      } catch (e) {
+        setError(e);
       } finally {
         setLoading(false);
       }
     }
     fetchData();
   }, []);
-  return { data, loading };
+  return { data, loading, error };
 }
 
 export default useFetch;

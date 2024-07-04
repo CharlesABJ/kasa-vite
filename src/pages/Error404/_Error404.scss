@@ -1,5 +1,5 @@
 .Error404 {
-  @include flex-center(center, column);
+  @include flex-center(center, $direction: column);
   text-align: center;
   padding-inline: 3rem;
   h1 {
@@ -8,18 +8,31 @@
     font-weight: $weight-semibold;
   }
   h2 {
-    font-size: $classic-h1-font-size;
-    font-weight: $weight-regular;
+    @include classic-h1-font-size;
+    font-weight: $weight-semibold;
     color: $color1;
   }
   a {
-    font-size: $classic-h2-font-size;
+    @include classic-h2-font-size;
     text-decoration: underline;
+    font-weight: $weight-semibold;
   }
 
   h1,
   h2,
   a {
     margin-block: calc($fourtypx + $seventeenpx);
+  }
+}
+
+// ========================================================================================================================
+//                                                MEDIA QUERIES ( RESPONSIVE )
+// ========================================================================================================================
+
+@media screen and (min-width: 1250px) {
+  .Error404 {
+    h1 {
+      font-size: calc(2 * $hundredpx + $eighteenpx + $seventypx);
+    }
   }
 }

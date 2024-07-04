@@ -12,9 +12,8 @@
   h1 {
     @include absolute-center($eighteenpx);
 
-    font-size: $twenty-fourpx;
+    @include classic-banner-title;
 
-    width: calc(2 * $hundredpx + $twenty-fivepx);
     color: $color5;
     text-shadow: $text-shadow;
   }
@@ -30,7 +29,7 @@
 
     h1 {
       @include absolute-center();
-      font-size: calc($twenty-fourpx * 2);
+
       width: max-content;
     }
   }

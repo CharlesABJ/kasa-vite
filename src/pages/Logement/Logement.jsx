@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import useFetch from "@/hooks/useFetch";
 import { useParams } from "react-router-dom";
 
 // Importation des composants
@@ -14,35 +15,16 @@ let apiLogementsUrl = "../api/logements.json";
 function Logement() {
   // Récupération de l'id de logement
   const { id } = useParams();
-  const [logement, setLogement] = useState(null);
-
-  // Tableau vide = utilisation de la fonction uniquement au montage
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(apiLogementsUrl);
-        const data = await response.json();
-        const logementEnCours = data.find((logement) => logement.id === id);
-
-        setLogement(logementEnCours);
-      } catch (error) {
-        console.error("Error fetching data", error);
-      }
-    }
-    fetchData();
-  }, []);
+  const { data: logement, loading, error } = useFetch(apiLogementsUrl, id);
 
   // Nombre d'étoile maximum / Note maximum
   const rates = [1, 2, 3, 4, 5];
 
   //
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
-  if (!logement)
-    return (
-      <div>
-        <h1>Chargement...</h1>
-      </div>
-    );
+  if (loading) return <h1>Chargement...</h1>;
+
+  if (error) return <div>Erreur lors de la récupération des données</div>;
   return (
     <main className="Logement">
       <Cover dataCover={{ ...logement, currentPictureIndex }} />

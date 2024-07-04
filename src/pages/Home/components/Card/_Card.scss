@@ -6,9 +6,9 @@
 
   h2 {
     @include absolute;
+    @include classic-card-title;
     color: $color5;
     width: calc(100% - 2 * $twentypx);
-    width: calc($hundredpx + $sixtypx);
   }
   transition: 0.3s ease-in-out;
   &:hover {
