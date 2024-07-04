@@ -8,7 +8,13 @@ import Error404 from "@pages/Error404/Error404";
 import Logement from "./pages/Logement/Logement";
 
 function App() {
-  const homeRedirectionPaths = ["/home", "/logement", "/logements", "/rooms"];
+  const homeRedirectionPaths = [
+    "/home",
+    "/logement",
+    "/logements",
+    "/rooms",
+    "/accueil",
+  ];
   return (
     <>
       <BrowserRouter>
@@ -24,7 +30,8 @@ function App() {
               path="/logements/:country?/:city?/:id"
               element={<Logement />}
             />
-            <Route path="*" element={<Error404 />} />
+            <Route path="/*" element={<Error404 />} />
+            <Route path="/logements/*" element={<Error404 />} />
           </Route>
         </Routes>
       </BrowserRouter>

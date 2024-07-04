@@ -3,32 +3,41 @@
   height: calc(2 * $hundredpx + $twenty-fivepx + $twentypx);
   margin-bottom: $tenpx;
   display: flex;
+  border-radius: $tenpx;
   overflow: hidden;
+
   .cover {
-    border-radius: $classic-radius;
+    flex: 0 0 100%;
     transition: transform 0.3s;
   }
   .arrow {
+    z-index: 1;
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: $twentypx;
+    font-size: $twenty-fourpx;
+    color: $color5;
     &.left {
-      left: 0.4rem;
+      left: $sevenpx;
       transform: rotate(-90deg) translateX(40%);
     }
     &.right {
-      right: 0.4rem;
+      right: $sevenpx;
       transform: rotate(90deg) translateX(-40%);
+    }
+    transition: 0.3s ease-in-out;
+    &:active {
+      color: darken($color: $color5, $amount: 10%);
     }
   }
   .nb-of-pictures {
+    z-index: 1;
     @include absolute-center;
     top: 90%;
     color: $color5;
     text-shadow: $text-shadow;
     font-weight: $weight-medium;
-    display: none;
+    // display: none;
   }
 }
 
@@ -48,5 +57,9 @@
 @media screen and (min-width: 1250px) {
   .Cover {
     height: calc(4 * $hundredpx + $fifteenpx);
+    border-radius: $twenty-fivepx;
+    .arrow {
+      font-size: $fiftypx;
+    }
   }
 }

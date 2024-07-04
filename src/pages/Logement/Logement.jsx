@@ -8,6 +8,7 @@ import Star from "@/pages/Logement/components/Star/Star";
 import Host from "@/pages/Logement/components/Host/Host";
 import Tag from "@/pages/Logement/components/Tag/Tag";
 import Collapse from "@/components/Collapse/Collapse";
+import Error404 from "@/pages/Error404/Error404";
 
 // importation des données de logements
 let apiLogementsUrl = "../api/logements.json";
@@ -20,14 +21,13 @@ function Logement() {
   // Nombre d'étoile maximum / Note maximum
   const rates = [1, 2, 3, 4, 5];
 
-  //
-  const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   if (loading) return <h1>Chargement...</h1>;
 
   if (error) return <div>Erreur lors de la récupération des données</div>;
+  if (!logement) return <Error404 />;
   return (
     <main className="Logement">
-      <Cover dataCover={{ ...logement, currentPictureIndex }} />
+      <Cover dataCover={logement} />
 
       <h1>{logement.title}</h1>
       <h2 className="city">{logement.location}</h2>
