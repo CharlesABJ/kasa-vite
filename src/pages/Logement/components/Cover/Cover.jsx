@@ -85,7 +85,7 @@ function Cover({ dataCover }) {
           </>
         )}
       </div>
-      {isModalOpen && (
+      {isModalOpen & (window.innerWidth > 768) && (
         <>
           <div onClick={closeModal} className="overlay for-modal"></div>
           <div className="modal-image">
