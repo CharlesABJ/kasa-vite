@@ -9,6 +9,7 @@
     @include classic-card-title;
     color: $color5;
     width: calc(100% - 2 * $twentypx);
+    z-index: 5;
   }
   transition: 0.3s ease-in-out;
   &:hover {

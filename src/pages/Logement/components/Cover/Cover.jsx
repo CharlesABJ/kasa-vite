@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import useImageModal from "@/hooks/useImageModal";
 
 function Cover({ dataCover }) {
+  const { isModalOpen, modalSrc, modalAlt, openModal, closeModal } =
+    useImageModal();
   const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
   // Affchage de l'image précédente
   const handlePrevPicture = () => {
@@ -22,9 +25,24 @@ function Cover({ dataCover }) {
   // Affichage des images toutes les 5 secondes
   useEffect(() => {
     const interval = setInterval(() => {
-      handleNextPicture();
+      if (!isModalOpen) {
+        handleNextPicture();
+      }
     }, 5000);
     return () => clearInterval(interval);
+  }, [currentPictureIndex, isModalOpen]);
+
+  const keybordNavigation = (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", keybordNavigation);
+    return () => {
+      window.removeEventListener("keydown", keybordNavigation);
+    };
   }, [currentPictureIndex]);
 
   const translateEffect = {
@@ -32,39 +50,54 @@ function Cover({ dataCover }) {
   };
 
   return (
-    <div className="Cover">
-      {dataCover.pictures.map((picture, index) => (
-        <img
-          style={translateEffect}
-          className={`cover${index === currentPictureIndex ? " active" : ""}`}
-          key={index}
-          src={picture}
-          alt={dataCover.title}
-        />
-      ))}
+    <>
+      <div className="Cover">
+        {dataCover.pictures.map((picture, index) => (
+          <img
+            onClick={() => openModal(picture, dataCover.title)}
+            style={translateEffect}
+            className={`cover${index === currentPictureIndex ? " active" : ""}`}
+            key={index}
+            src={picture}
+            alt={dataCover.title}
+          />
+        ))}
 
-      {dataCover.pictures.length > 1 && (
+        {dataCover.pictures.length > 1 && (
+          <>
+            <span className="nb-of-pictures">{`${currentPictureIndex + 1}/${
+              dataCover.pictures.length
+            }`}</span>
+            <div
+              title="Afficher l'image précédente"
+              className="arrow left"
+              onClick={handlePrevPicture}
+            >
+              <i className="fa-solid fa-chevron-up prev"></i>
+            </div>
+            <div
+              title="Afficher l'image suivante"
+              className="arrow right"
+              onClick={handleNextPicture}
+            >
+              <i className="fa-solid fa-chevron-up next"></i>
+            </div>
+          </>
+        )}
+      </div>
+      {isModalOpen && (
         <>
-          <span className="nb-of-pictures">{`${currentPictureIndex + 1}/${
-            dataCover.pictures.length
-          }`}</span>
-          <div
-            title="Afficher l'image précédente"
-            className="arrow left"
-            onClick={handlePrevPicture}
-          >
-            <i className="fa-solid fa-chevron-up prev"></i>
-          </div>
-          <div
-            title="Afficher l'image suivante"
-            className="arrow right"
-            onClick={handleNextPicture}
-          >
-            <i className="fa-solid fa-chevron-up next"></i>
+          <div onClick={closeModal} className="overlay for-modal"></div>
+          <div className="modal-image">
+            <i
+              onClick={closeModal}
+              className="fa-solid fa-xmark close-modal"
+            ></i>
+            <img src={modalSrc} alt={modalAlt} />
           </div>
         </>
       )}
-    </div>
+    </>
   );
 }
 

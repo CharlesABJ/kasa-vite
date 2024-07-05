@@ -25,6 +25,10 @@ h2 {
   width: 100%;
   height: 100%;
   background-color: $banner-overlay;
+  z-index: 5;
+  &.for-modal {
+    position: fixed;
+  }
   &.half {
     background-color: transparent;
     background-image: linear-gradient((0deg, $banner-overlay), transparent);
@@ -42,6 +46,32 @@ h2 {
   }
 }
 
+.modal-image {
+  @include classic-modal-image;
+  .close-modal {
+    @include absolute(95%, 105%);
+    @include classic-text-shadow;
+    background-color: $color1;
+    border-radius: 50%;
+    color: $color5;
+    padding: $fourpx $sixpx;
+    font-size: $sixteenpx;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background-color: lighten($color: $color1, $amount: 10%);
+    }
+    &:active {
+      background-color: $color2;
+      color: $color1;
+      transform: scale(0.9);
+    }
+  }
+  img {
+    @include classic-border-radius;
+  }
+}
+
 // ========================================================================================================================
 //                                                MEDIA QUERIES ( RESPONSIVE )
 // ========================================================================================================================
@@ -55,5 +85,13 @@ h2 {
 @media screen and (min-width: 1250px) {
   main {
     padding-block: 0 $fiftypx;
+  }
+
+  .modal-image {
+    .close-modal {
+      @include absolute(calc(100% - $twenty-fourpx), 102%);
+      font-size: $twenty-fourpx;
+      padding: $fourpx $eightpx;
+    }
   }
 }
