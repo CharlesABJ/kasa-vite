@@ -4,14 +4,14 @@ export default function Header({ dataHeader }) {
   return (
     <header className="Header">
       <div className="logo">
-        <NavLink to="/home">
+        <NavLink to="/">
           <img src={dataHeader.logo} alt="logo Kasa" />
         </NavLink>
       </div>
       <nav>
         <ul>
           <li>
-            <NavLink to="/home">Accueil</NavLink>
+            <NavLink to="/">Accueil</NavLink>
           </li>
           <li>
             <NavLink to="/about">À propos</NavLink>

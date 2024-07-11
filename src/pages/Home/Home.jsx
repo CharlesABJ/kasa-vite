@@ -17,7 +17,7 @@ function Home() {
     title: "Chez vous, partout et ailleurs",
     src: homeBanner,
   };
-  if (loading) return <div>Chargement...</div>;
+  if (loading) return <h1>Chargement...</h1>;
   if (error) return <div>Erreur lors de la récupération des données</div>;
   return (
     <main className="Home">
