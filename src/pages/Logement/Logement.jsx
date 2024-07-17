@@ -11,11 +11,12 @@ import Collapse from "@/components/Collapse/Collapse";
 import Error404 from "@/pages/Error404/Error404";
 
 // importation des données de logements
-let apiLogementsUrl = "../api/logements.json";
+let apiLogementsUrl = "/api/logements.json";
 
 function Logement() {
   // Récupération de l'id de logement
-  const { id } = useParams();
+  const { id, city, country } = useParams();
+  console.log(id, city, country);
   const { data: logement, loading, error } = useFetch(apiLogementsUrl, id);
 
   // Nombre d'étoile maximum / Note maximum
@@ -24,7 +25,7 @@ function Logement() {
   if (loading) return <h1>Chargement...</h1>;
 
   if (error) return <div>Erreur lors de la récupération des données</div>;
-  if (!logement) return <Error404 />;
+  if (!logement || !id) return <Error404 />;
   return (
     <main className="Logement">
       <Cover dataCover={logement} />

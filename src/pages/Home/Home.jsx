@@ -8,7 +8,7 @@ import homeBanner from "@/assets/images/home-banner.jpg";
 import Card from "./components/Card/Card";
 
 // importation des données de logements pour Home
-let apiLogementsUrl = "./api/logements.json";
+let apiLogementsUrl = "/api/logements.json";
 
 function Home() {
   const { data: homesData, loading, error } = useFetch(apiLogementsUrl);
