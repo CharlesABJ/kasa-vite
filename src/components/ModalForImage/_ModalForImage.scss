@@ -1,0 +1,25 @@
+.ModalForImage {
+  @include classic-modal-image;
+  .close-modal {
+    @include absolute(95%, 105%);
+    @include classic-text-shadow;
+    background-color: $color1;
+    border-radius: 50%;
+    color: $color5;
+    padding: $fourpx $sixpx;
+    font-size: $sixteenpx;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background-color: lighten($color: $color1, $amount: 10%);
+    }
+    &:active {
+      background-color: $color2;
+      color: $color1;
+      transform: scale(0.9);
+    }
+  }
+  img {
+    @include classic-border-radius;
+  }
+}
