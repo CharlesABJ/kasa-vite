@@ -1,8 +1,8 @@
-import Banner from "@/components/Banner/Banner";
-import useFetch from "@/hooks/useFetch";
+import Banner from "@components/Banner/Banner";
+import useFetch from "@hooks/useFetch";
 
 // importation des assets
-import homeBanner from "@/assets/images/home-banner.jpg";
+import homeBanner from "@assets/images/home-banner.jpg";
 
 // importation des données de logements pour Home
 import Card from "./components/Card/Card";

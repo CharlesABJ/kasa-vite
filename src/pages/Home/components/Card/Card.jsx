@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // importation des assets
-import imagePlaceHolder from "@/assets/images/logo.svg";
+import imagePlaceHolder from "@assets/images/logo.svg";
 
 function Card({ dataCard }) {
   const handlePicturePlaceHolder = (e) => {

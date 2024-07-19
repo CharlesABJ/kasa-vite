@@ -17,6 +17,17 @@ h2 {
   @include classic-h2;
 }
 
+// ACCESSIBILITÉ
+
+// Couleur des élements au focus
+*:focus-visible {
+  border: 1px solid $color1;
+  box-shadow: 0 0 8px $color1;
+  outline-color: $color1;
+}
+a {
+  display: block;
+}
 // Overlay
 .overlay {
   position: absolute;
@@ -43,32 +54,6 @@ h2 {
     .overlay {
       background-color: $banner-overlay2;
     }
-  }
-}
-
-.modal-image {
-  @include classic-modal-image;
-  .close-modal {
-    @include absolute(95%, 105%);
-    @include classic-text-shadow;
-    background-color: $color1;
-    border-radius: 50%;
-    color: $color5;
-    padding: $fourpx $sixpx;
-    font-size: $sixteenpx;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    &:hover {
-      background-color: lighten($color: $color1, $amount: 10%);
-    }
-    &:active {
-      background-color: $color2;
-      color: $color1;
-      transform: scale(0.9);
-    }
-  }
-  img {
-    @include classic-border-radius;
   }
 }
 

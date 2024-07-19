@@ -3,10 +3,10 @@ import useFetch from "@/hooks/useFetch";
 import { useParams } from "react-router-dom";
 
 // Importation des composants
-import Cover from "@/pages/Logement/components/Cover/Cover";
-import Star from "@/pages/Logement/components/Star/Star";
-import Host from "@/pages/Logement/components/Host/Host";
-import Tag from "@/pages/Logement/components/Tag/Tag";
+import Cover from "@pages/Logement/components/Cover/Cover";
+import Star from "@pages/Logement/components/Star/Star";
+import Host from "@pages/Logement/components/Host/Host";
+import Tag from "@pages/Logement/components/Tag/Tag";
 import Collapse from "@/components/Collapse/Collapse";
 import Error404 from "@/pages/Error404/Error404";
 
@@ -16,7 +16,6 @@ let apiLogementsUrl = "/api/logements.json";
 function Logement() {
   // Récupération de l'id de logement
   const { id, city, country } = useParams();
-  console.log(id, city, country);
   const { data: logement, loading, error } = useFetch(apiLogementsUrl, id);
 
   // Nombre d'étoile maximum / Note maximum

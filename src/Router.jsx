@@ -9,7 +9,13 @@ const Error404 = lazy(() => import("@pages/Error404/Error404"));
 const Logement = lazy(() => import("@pages/Logement/Logement"));
 
 // Définition des chemins de redirection vers la page d'accueil
-const homeRedirectionPaths = ["/home", "test", "/rooms", "/accueil"];
+const homeRedirectionPaths = [
+  "/home",
+  "logement",
+  "logements",
+  "/rooms",
+  "/accueil",
+];
 
 const router = createBrowserRouter([
   {
@@ -42,7 +48,6 @@ const router = createBrowserRouter([
         path: "/about",
         element: (
           <Suspense fallback={<h1>Chargement...</h1>}>
-            {" "}
             <About />
           </Suspense>
         ),

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useImageModal from "@/hooks/useImageModal";
+import ModalForImage from "@components/ModalForImage/ModalForImage";
 
 function Cover({ dataCover }) {
   const { isModalOpen, modalSrc, modalAlt, openModal, closeModal } =
@@ -69,6 +70,7 @@ function Cover({ dataCover }) {
               dataCover.pictures.length
             }`}</span>
             <div
+              tabIndex="0"
               title="Afficher l'image précédente"
               className="arrow left"
               onClick={handlePrevPicture}
@@ -76,6 +78,7 @@ function Cover({ dataCover }) {
               <i className="fa-solid fa-chevron-up prev"></i>
             </div>
             <div
+              tabIndex="0"
               title="Afficher l'image suivante"
               className="arrow right"
               onClick={handleNextPicture}
@@ -85,20 +88,13 @@ function Cover({ dataCover }) {
           </>
         )}
       </div>
-      {isModalOpen & (window.innerWidth > 768) ? (
-        <>
-          <div onClick={closeModal} className="overlay for-modal"></div>
-          <div className="modal-image">
-            <i
-              onClick={closeModal}
-              className="fa-solid fa-xmark close-modal"
-            ></i>
-            <img src={modalSrc} alt={modalAlt} />
-          </div>
-        </>
-      ) : (
-        ""
-      )}
+      <ModalForImage
+        isModalOpen={isModalOpen}
+        modalSrc={modalSrc}
+        modalAlt={modalAlt}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
     </>
   );
 }

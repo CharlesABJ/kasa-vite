@@ -1,9 +1,9 @@
 import React from "react";
-import Banner from "@/components/Banner/Banner";
-import Collapse from "@/components/Collapse/Collapse";
+import Banner from "@components/Banner/Banner";
+import Collapse from "@components/Collapse/Collapse";
 
 // importation des assets
-import bannerAbout from "@/assets/images/about-banner.jpg";
+import bannerAbout from "@assets/images/about-banner.jpg";
 
 // creation des données de About
 const dataCollapses = [
